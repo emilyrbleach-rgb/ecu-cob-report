@@ -1049,7 +1049,7 @@ function switchPlatform(p, keepScroll) {
   const hs = $('#heroSrc'); if (hs) hs.innerHTML = P.srcPill || '<b>Sprinklr</b>, <b>Meta</b>, <b>Sprout</b>';
   const fs = $('#footSrc'); if (fs) fs.textContent = P.footSrc || 'Sprinklr, Meta Business Suite and Sprout Social';
   $('#postsIntro').textContent = P.postsIntro;
-  document.title = 'ECU COB ' + P.name + ' Report';
+  document.title = 'ECU COB Social Media Report';
   buildNav(); setFilterOptions(); renderSections(); renderShort(); renderPosts(); renderDefs(); syncAddButtons();
   try { if (location.hash.slice(1) !== p && ['', '#instagram', '#facebook', '#linkedin'].includes(location.hash)) history.replaceState(null, '', '#' + p); } catch (e) { /* ignore */ }
   if (changed && !keepScroll) scrollTo(0, 0);
