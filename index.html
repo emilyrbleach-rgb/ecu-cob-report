@@ -1975,7 +1975,7 @@ if (MAKE) { try { history.replaceState(null, '', location.pathname); } catch (e)
 initHelp(); initTextSize(); initFullReport(); initSprites(); bindFilters(); bindBuilder(); switchPlatform(PLATS.includes(location.hash.slice(1)) ? location.hash.slice(1) : 'instagram', true); initDownloads();
 if (MAKE) runMaker();
 addEventListener('hashchange', () => { if (PLATS.includes(location.hash.slice(1))) switchPlatform(location.hash.slice(1)); });
-(function () { if (window.__noTour) return; let n = 0; try { n = Number(localStorage.getItem('ecu-tour-visits') || 0); } catch (e) { n = 0; } if (n >= 2) return; try { localStorage.setItem('ecu-tour-visits', String(n + 1)); } catch (e) { /* ignore */ } setTimeout(() => { if (!$('#tourOv')) startTour(); }, 700); })();
+(function () { if (window.__noTour) return; let n = 0; try { n = Number(localStorage.getItem('ecu-tour-visits-2') || 0); } catch (e) { n = 0; } if (n >= 2) return; try { localStorage.setItem('ecu-tour-visits-2', String(n + 1)); } catch (e) { /* ignore */ } setTimeout(() => { if (!$('#tourOv')) startTour(); }, 700); })();
 if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => { if (!$('#builder').hidden) renderBuilder(); });
 })();
 </script>
